@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: ./pre-build.sh
+      - run: sudo ./pre-build.sh
       - run: ./build.sh
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
