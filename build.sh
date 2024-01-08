@@ -1,12 +1,27 @@
 #!/usr/bin/env bash
 
-docker build -t buildroot .
+BUILD_ROOT_RELEASE=2021.02-rc2
 
-docker run \
-    --rm \
-    --name build-v86 \
-    -v $PWD/dist:/build \
-    -v $PWD/buildroot-v86/:/buildroot-v86 \
-    buildroot
+mkdir -p source
+mkdir -p dist
 
-echo "See ./dist for built ISO"
+get_source() {
+    (
+        cd source
+        wget -c http://buildroot.org/downloads/buildroot-${BUILD_ROOT_RELEASE}.tar.gz
+        tar xzf buildroot-${BUILD_ROOT_RELEASE}.tar.gz
+    )
+}
+
+start_build() {
+    (
+        cd source/buildroot-${BUILD_ROOT_RELEASE}
+        echo $PWD
+        make BR2_EXTERNAL=../../buildroot-v86 v86_defconfig \
+            && make legal-info \
+            && make
+    )
+}
+
+get_source
+start_build

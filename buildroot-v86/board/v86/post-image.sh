@@ -3,7 +3,7 @@
 # Run after buildroot has built the image, and path to the built
 # output/image dir is passed as first arg.  We copy the built ISO
 # out of the container.
-outdir=../dist
+outdir=../../dist
 cp ${BINARIES_DIR}/rootfs.iso9660 ${outdir}/v86-linux.iso
 echo "Created v86-linux.iso."
 

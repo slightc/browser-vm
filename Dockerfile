@@ -46,7 +46,7 @@ ENV LANG='C' \
     TERM=xterm
 
 # Buildroot will place built artifacts here at the end.
-VOLUME /build
+VOLUME /dist
 
 WORKDIR /root/buildroot-${BUILD_ROOT_RELEASE}
 ENTRYPOINT ["/buildroot-v86/build-v86.sh"]
