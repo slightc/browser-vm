@@ -33,6 +33,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
     libc6:i386 \
     libncurses5-dev \
     libssl-dev \
+    texinfo \
     rsync; \
     wget -c http://buildroot.org/downloads/buildroot-${BUILD_ROOT_RELEASE}.tar.gz; \
     tar axf buildroot-${BUILD_ROOT_RELEASE}.tar.gz;
