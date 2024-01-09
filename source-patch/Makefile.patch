@@ -1,0 +1,8 @@
+724c724
+< 	rm -rf $(TARGET_DIR)/usr/include $(TARGET_DIR)/usr/share/aclocal \
+---
+> 	rm -rf $(TARGET_DIR)/usr/share/aclocal \
+730c730
+< 		\( -name '*.a' -o -name '*.la' -o -name '*.prl' \) -print0 | xargs -0 rm -f
+---
+> 		\( -o -name '*.la' -o -name '*.prl' \) -print0 | xargs -0 rm -f
