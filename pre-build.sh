@@ -17,3 +17,6 @@ DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
     libssl-dev \
     texinfo \
     rsync;
+
+# sudo apt-get install flex bison texinfo mercurial git-core
+# sudo apt install build-essentials flex libncurses5-dev bc libelf-dev bison

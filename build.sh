@@ -29,4 +29,4 @@ start_build() {
 }
 
 get_source
-# start_build
+start_build
