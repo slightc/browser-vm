@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BUILD_ROOT_RELEASE=2021.02-rc2
+BUILD_ROOT_RELEASE=2022.08.1
 
 mkdir -p source
 mkdir -p dist
@@ -24,4 +24,4 @@ start_build() {
 }
 
 get_source
-start_build
+# start_build

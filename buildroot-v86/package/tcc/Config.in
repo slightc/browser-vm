@@ -1,0 +1,4 @@
+config BR2_PACKAGE_TCC
+	bool "tcc"
+	help
+	  tinycc is a small C compiler for small systems.

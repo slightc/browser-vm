@@ -1,2 +1,3 @@
 dist/
 source/
+buildroot-v86/board/v86/rootfs_overlay/root/*
